@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Little Pookie ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" class="loader">
+    <div class="loader-heart">❤</div>
+    <p class="loader-text">loading your surprise...</p>
+  </div>
+
+  <!-- ============ BACKGROUND LAYERS ============ -->
+  <div class="bg-gradient"></div>
+  <div id="floating-hearts" class="floating-hearts" aria-hidden="true"></div>
+
+  <!-- ============ MUSIC TOGGLE ============ -->
+  <button id="music-toggle" class="music-toggle" aria-label="Toggle background music" title="Toggle music">
+    <span id="music-icon">🎵</span>
+  </button>
+  <audio id="bg-music" loop>
+    <!-- Optional: place a royalty free romantic track named music.mp3 next to this file -->
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ============ MAIN APP CONTAINER ============ -->
+  <main id="app">
+
+    <!-- ---------- HOME PAGE ---------- -->
+    <section id="page-home" class="page active-page">
+      <div class="content-wrap">
+        <div class="big-heart" aria-hidden="true">
+          <svg viewBox="0 0 32 29" class="heart-svg">
+            <path d="M16 29C16 29 0 19.5 0 9.5C0 4.3 4.1 0 9.2 0C12.1 0 14.6 1.5 16 3.8C17.4 1.5 19.9 0 22.8 0C27.9 0 32 4.3 32 9.5C32 19.5 16 29 16 29Z"/>
+          </svg>
+        </div>
+
+        <h1 class="home-title">For My Little Pookie <span class="heart-emoji">❤️</span></h1>
+        <p class="home-subtitle">Every heartbeat of mine secretly whispers your name.</p>
+
+        <div class="home-buttons">
+          <button class="btn btn-primary sparkle-btn" data-goto="page-letter">
+            <span class="btn-icon">💌</span> Open My Letter
+          </button>
+          <button class="btn btn-secondary sparkle-btn" data-goto="page-question">
+            <span class="btn-icon">❤️</span> A Small Question
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- LOVE LETTER PAGE ---------- -->
+    <section id="page-letter" class="page">
+      <div class="content-wrap">
+        <button class="back-btn" data-goto="page-home" aria-label="Back home">← Back</button>
+
+        <div id="envelope" class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="envelope-seal">❤</div>
+          </div>
+          <p class="tap-hint">tap the envelope to open it</p>
+        </div>
+
+        <article id="letter" class="letter">
+          <div class="letter-paper">
+            <p class="letter-greeting">My Little Pookie,</p>
+            <p>You came into my life unexpectedly, but now I can't imagine a single day without you.</p>
+            <p>You're my happiest thought, my safest place, and my favorite person.</p>
+            <p>Your smile makes my day brighter, your voice calms my heart, and every moment with you becomes my favorite memory.</p>
+            <p>Thank you for loving me, supporting me, annoying me, making me laugh, and simply being you.</p>
+            <p>No matter where life takes us, I hope we continue making beautiful memories together.</p>
+            <p>I love you today, tomorrow, and every day after that.</p>
+            <p class="letter-signoff">Forever Yours ❤️</p>
+          </div>
+
+          <div class="letter-footer">
+            <span class="i-love-you pulse">I Love You ❤️</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- QUESTION PAGE ---------- -->
+    <section id="page-question" class="page">
+      <div class="content-wrap">
+        <button class="back-btn" data-goto="page-home" aria-label="Back home">← Back</button>
+
+        <div id="question-card" class="glass-card question-card">
+          <p class="question-text">Do you love me? 🥺❤️</p>
+
+          <div class="question-buttons">
+            <button id="btn-yes" class="btn btn-primary sparkle-btn">❤️ Yes</button>
+            <button id="btn-no" class="btn btn-ghost sparkle-btn">💔 No</button>
+          </div>
+        </div>
+
+        <div id="answer-card" class="glass-card answer-card hidden">
+          <div class="bouncing-heart">❤️</div>
+          <p id="answer-text" class="answer-text"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONFETTI CANVAS ============ -->
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    Made with endless love <span class="footer-heart">❤️</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
